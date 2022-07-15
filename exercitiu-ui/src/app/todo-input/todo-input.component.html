@@ -1,0 +1,11 @@
+<div class="text-light">    
+    <div style="display: flex">
+        <input [ngClass]="{ 'edit': isInEditMode }" type="text" class="input-text" placeholder="New item" [(ngModel)]="inputText" value="da">      
+        <button class="btn-add" 
+            (click)="onClickAdd()" 
+            (keyup.enter)="onClickAdd()" 
+            [disabled]="inputText.length==0">
+            {{ isInEditMode? 'Save' : 'Add' }}
+        </button>
+    </div>  
+</div>

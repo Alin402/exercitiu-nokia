@@ -1,0 +1,60 @@
+ul {
+    margin-top: 1rem;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    background-color: #EEEEEE;
+    color: #0F044C;
+}
+
+.button-hidden {
+    visibility: hidden;
+}
+
+.action-container {
+    display: flex;
+}
+
+.btn-delete {
+    background-color: #DC143C;
+    border-radius: 3px;
+    padding: .5rem 1rem;
+    text-transform: uppercase;
+    color: #EEEEEE;
+    letter-spacing: 2px;
+    border: none;
+    transition: transform .4s;
+    margin-left: .8rem;
+}
+
+.btn-delete:hover {
+    transform: scale(1.05); 
+}
+
+.btn-edit {
+    background-color: #141E61;
+    border-radius: 3px;
+    padding: .5rem 1rem;
+    text-transform: uppercase;
+    color: #EEEEEE;
+    letter-spacing: 2px;
+    border: none;
+    transition: transform .4s;
+    margin-left: .8rem;
+}
+
+.btn-edit:hover {
+    transform: scale(1.05); 
+}
+
+.edit-background {
+    background-color: #1597BB;
+}
+
+.title {
+    text-transform: uppercase;
+    color: #EEEEEE;
+    font-weight: 100;
+}

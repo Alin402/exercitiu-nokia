@@ -1,0 +1,17 @@
+
+<h2 class="title" *ngIf="itemList.length==0">Lista este goala</h2>
+<button class="ml-auto mr-1 btn-delete" (click)="onDeleteAllItems()">Delete All</button>
+<div>  
+    <ul class="list-group">  
+        <ng-container *ngFor="let item of itemList.reverse()">
+                <li [ngClass]="{ 'edit-background': isInEditMode && item.id === selectedForEdit.id }" class="list-group-item">{{item.name}}
+                    <div class="action-container">
+                        <button [ngClass]="{ 'button-hidden': isInEditMode && item.id !== selectedForEdit.id }" class="ml-auto mr-1 btn-edit" (click)="onToggleEditMode(item)">
+                            {{ isInEditMode ? 'Stop Edit' : 'Edit' }}
+                        </button>
+                        <button [ngClass]="{ 'button-hidden': isInEditMode && item.id === selectedForEdit.id }" class="btn-delete" (click)="onClickDelete(item.id)">Delete</button>
+                    </div>
+                </li>
+        </ng-container>
+    </ul>  
+</div>
